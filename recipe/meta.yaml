@@ -1,5 +1,5 @@
 {% set name = "baycomp" %}
-{% set version = "1.0.2" %}
+{% set version = "1.0.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: c43472c16bd7cdf4884dd4c73dd307e4a3da7097fe49c83cd5e88d75142923b0
+  sha256: 32b25ad7b16d5b251ddb9f6110a32d7b3953b987096da1d25ef277935d25daec
 
 build:
   noarch: python
-  number: 1
-  script: "{{ PYTHON }} -m pip install . -vv"
+  number: 0
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -35,7 +35,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: 'Library for Bayesian comparison of predictive models'
+  summary: Library for Bayesian comparison of predictive models
 
   description: |
     A library for comparing results of predictive models on single
